@@ -16,8 +16,8 @@
             getAccessToken() {
                 const params = new URLSearchParams();
                 params.append("grant_type", "client_credentials");
-                params.append("client_id", "v3YvEB7MQAmosLDjPHKa3LWyfEikMU5GVzZqNLF77lFP2hsKuQ");
-                params.append("client_secret", "91BEGtP8Iv5UcmGpEljgKTzYCmNwUAvCwMSyFi1H");
+                params.append("client_id", process.env.VUE_APP_CLIENT_ID);
+                params.append("client_secret", process.env.VUE_APP_CLIENT_SECRET);
                 var self = this;
                 fetch("https://api.petfinder.com/v2/oauth2/token", {
                     method: "POST",
