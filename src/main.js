@@ -14,6 +14,8 @@ import store from "./store";
 import dotenv from 'dotenv'
 dotenv.config()
 
+Vue.component('my-heading', require('./components/TheHeading.vue').default);
+
 //router
 import router from './router';
 

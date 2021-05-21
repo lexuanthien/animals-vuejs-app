@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <p>Xin chòa</p>
-    <button v-on:click="getAccessToken()">Login</button>
-  </div>
+    <div class="page-login" v-on:click="getAccessToken()">
+        <img :src="'/images/logo.png'" alt="">
+        <p>please connect</p>
+    </div>
 </template>
 
 <script>
