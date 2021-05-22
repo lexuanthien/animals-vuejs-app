@@ -16,6 +16,10 @@
                 
             }
         },
+        created () {
+            // detect tab close and browser close event
+            window.addEventListener('beforeunload', this.destroyToken) 
+        },
         methods: {
             home() {
                 if(this.$route.name == 'home') {
