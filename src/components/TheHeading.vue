@@ -1,11 +1,11 @@
 <template>
     <div class="menu">
-      <div class="text-logo" v-on:click="home()" v-bind:class="[$route.name == 'home' ? 'active' : '']">doulber.Pet</div>
-      <ul class="list-item">
-        <li v-on:click="dog()"><i class="fas fa-dog"></i></li>
-        <li v-on:click="cat()"><i class="fas fa-cat"></i></li>
-      </ul>
-      <div class="btn-disconnect" v-on:click="destroyToken()">disconnect</div>
+        <div class="text-logo" v-on:click="home()" v-bind:class="[$route.name == 'home' ? 'active' : '']">doulber.Pet</div>
+        <ul>
+            <li v-on:click="dog()"><i class="fas fa-dog"></i></li>
+            <li v-on:click="cat()"><i class="fas fa-cat"></i></li>
+            <li v-on:click="destroyToken()" class="btn-disconnect">disconnect</li>
+        </ul>
     </div>
 </template>
 

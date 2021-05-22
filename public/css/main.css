@@ -2,12 +2,17 @@ body {
     font-size: 16px !important;
     letter-spacing: 0.5px;
     font-weight: bold;
-    padding: 0 50px;
+    padding: 0 10px;
     line-height: 1.5;
     font-family: 'Quicksand', sans-serif;
     margin: 0 !important;
     background: #e3f6f5;
     color: #606470;
+}
+@media only screen and (min-width: 992px) {
+    body {
+        padding: 0 50px;
+    }
 }
 ::-webkit-scrollbar {
     display: none;
@@ -29,8 +34,10 @@ a {
     overflow-x: hidden;
     height: 100% !important;
 }
-.main::-webkit-scrollbar {
-    display: block;
+@media only screen and (min-width: 992px) {
+    .main::-webkit-scrollbar {
+        display: block;
+    }
 }
 .main::-webkit-scrollbar {
     width: 10px;
@@ -38,8 +45,7 @@ a {
 .main::-webkit-scrollbar-track {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
     background: #e3f6f5;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin: 80px 0 30px 0px;
 }
 .main::-webkit-scrollbar-thumb {
     background: #FFFFFF;
@@ -51,7 +57,7 @@ a {
 /* Menu */
 .menu {
     background: #FFFFFF;
-    padding: 15px 30px;
+    padding: 15px;
     position: fixed;
     top: 0;
     right: 0;
@@ -61,15 +67,24 @@ a {
     align-items: center;
     z-index: 1030;
 }
+@media only screen and (min-width: 992px) {
+    .menu {
+        padding: 15px 55px;
+    }
+}
 .menu ul {
     list-style: none;
     display: flex;
-    margin: 0 50px 0 auto;
+    margin: 0 0 0 auto;
+    padding: 0;
 }
 .menu ul li {
-    padding: 0 15px;
+    padding: 0 0 0 20px;
 }
-.menu .text-logo, .menu ul li i, .btn-disconnect {
+.menu ul li:last-child {
+    padding: 0 0 0 50px !important;
+}
+.menu .text-logo, .menu ul li i, .menu .btn-disconnect {
     font-size: 23px;
     font-weight: 900 !important;
     background: linear-gradient(to right, #f38181, #bfd8d5, #dfdfdf) no-repeat;
@@ -79,14 +94,14 @@ a {
     cursor: pointer;
     filter: drop-shadow(1px 1px rgba(0,0,0,.2));
 }
-.btn-disconnect {
+.menu .btn-disconnect {
     font-size: 16px !important;
 }
 .menu ul li i:hover, .btn-disconnect:hover {
     background: linear-gradient(to left, #f38181, #bfd8d5, #dfdfdf) no-repeat;
 }
 .box-body {
-    padding: 80px 0px 25px 0px;
+    padding: 80px 0px 20px 0px;
 }
 
 /* table */
@@ -133,7 +148,7 @@ tbody tr:hover {
     align-items: center;
 }
 .btn-get-items div {
-    margin-right: 10px;
+    margin: 0 10px 0 5px;
 }
 .btn-get-items div.pre {
     background: #FFFFFF;
@@ -312,11 +327,12 @@ tbody tr:hover {
 @media only screen and (min-width: 992px) {
     .grid-container {
         grid-template-columns: auto auto auto;
+        margin-right: 20px;
     }
 }
 
 .grid-item {
-    margin: 0 15px 15px 0px;
+    margin: 0 5px 10px 5px;
     background-color: #FFFFFF;
     padding: 15px;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
@@ -372,7 +388,7 @@ tbody tr:hover {
     cursor: pointer;
 }
 .page-login img {
-    width: 300px;
+    width: 200px;
 }
 .page-login p {
     font-size: 20px;
@@ -396,14 +412,14 @@ tbody tr:hover {
   transform: rotateZ(-60deg);
 }
 .page-login img:hover {
-  transition: 0.9s;
+  transition: 1.5s;
   transform: rotateZ(360deg);
 }
 .page-login img:hover:before {
-  transition: 0.9s;
+  transition: 1.5s;
 }
 .page-login img:hover:after {
-  transition: 0.9s;
+  transition: 1.5s;
 }
 
 .spin-wrapper {

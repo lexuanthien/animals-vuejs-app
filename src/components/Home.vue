@@ -115,7 +115,7 @@
             });
         },
         mounted() {
-            
+            console.log(this.$el);
         },
         watch: {
             $route(to) {
