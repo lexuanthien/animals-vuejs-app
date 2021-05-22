@@ -94,7 +94,10 @@
                 displayModal: 'none'
             }
         },
-        mounted() {
+        created () {
+            // when windown click
+            document.addEventListener('click', this.onClick);
+            // add data
             this.axios
             .get('https://api.petfinder.com/v2/animals', {
                 'headers' : {
@@ -110,6 +113,9 @@
             .catch(error => {
                 return
             });
+        },
+        mounted() {
+            
         },
         watch: {
             $route(to) {
@@ -222,9 +228,6 @@
                     this.hideModal()
                 }
             }
-        },
-        created () {
-            document.addEventListener('click', this.onClick);
-        },
+        }
     } 
 </script>
